@@ -8,20 +8,34 @@
 
 /* Begin PBXBuildFile section */
 		21032A501ECE7D77009A3AC5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21032A4F1ECE7D77009A3AC5 /* AppDelegate.swift */; };
-		21032A521ECE7D77009A3AC5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21032A511ECE7D77009A3AC5 /* ViewController.swift */; };
 		21032A551ECE7D77009A3AC5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21032A531ECE7D77009A3AC5 /* Main.storyboard */; };
 		21032A571ECE7D77009A3AC5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 21032A561ECE7D77009A3AC5 /* Assets.xcassets */; };
 		21032A5A1ECE7D77009A3AC5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21032A581ECE7D77009A3AC5 /* LaunchScreen.storyboard */; };
+		21032A621ECE8232009A3AC5 /* ClockVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21032A611ECE8232009A3AC5 /* ClockVC.swift */; };
+		21032A641ECE8689009A3AC5 /* AlarmsTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21032A631ECE8689009A3AC5 /* AlarmsTVC.swift */; };
+		21032A661ECE877F009A3AC5 /* CreateAlarmVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21032A651ECE877F009A3AC5 /* CreateAlarmVC.swift */; };
+		21032A681ECE8892009A3AC5 /* Alarm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21032A671ECE8892009A3AC5 /* Alarm.swift */; };
+		21032A6B1ECE8B26009A3AC5 /* RealmInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21032A6A1ECE8B26009A3AC5 /* RealmInteractor.swift */; };
+		21032A6D1ECE8C15009A3AC5 /* WeatherFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21032A6C1ECE8C15009A3AC5 /* WeatherFetcher.swift */; };
+		D17CE125F8611ED25D6A026A /* Pods_SmartClock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5ED010076B75593BE55A8966 /* Pods_SmartClock.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0F32CF2720437933FF905706 /* Pods-SmartClock.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartClock.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SmartClock/Pods-SmartClock.debug.xcconfig"; sourceTree = "<group>"; };
 		21032A4C1ECE7D77009A3AC5 /* SmartClock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartClock.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		21032A4F1ECE7D77009A3AC5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		21032A511ECE7D77009A3AC5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		21032A541ECE7D77009A3AC5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		21032A561ECE7D77009A3AC5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		21032A591ECE7D77009A3AC5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		21032A5B1ECE7D77009A3AC5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		21032A611ECE8232009A3AC5 /* ClockVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClockVC.swift; sourceTree = "<group>"; };
+		21032A631ECE8689009A3AC5 /* AlarmsTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlarmsTVC.swift; sourceTree = "<group>"; };
+		21032A651ECE877F009A3AC5 /* CreateAlarmVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateAlarmVC.swift; sourceTree = "<group>"; };
+		21032A671ECE8892009A3AC5 /* Alarm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alarm.swift; sourceTree = "<group>"; };
+		21032A6A1ECE8B26009A3AC5 /* RealmInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmInteractor.swift; sourceTree = "<group>"; };
+		21032A6C1ECE8C15009A3AC5 /* WeatherFetcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherFetcher.swift; sourceTree = "<group>"; };
+		5B038D39495F5C042AE96466 /* Pods-SmartClock.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartClock.release.xcconfig"; path = "Pods/Target Support Files/Pods-SmartClock/Pods-SmartClock.release.xcconfig"; sourceTree = "<group>"; };
+		5ED010076B75593BE55A8966 /* Pods_SmartClock.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmartClock.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D17CE125F8611ED25D6A026A /* Pods_SmartClock.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +55,8 @@
 			children = (
 				21032A4E1ECE7D77009A3AC5 /* SmartClock */,
 				21032A4D1ECE7D77009A3AC5 /* Products */,
+				EF79391BB2C30A715FC95667 /* Pods */,
+				DB0507F4FC048629242467F7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +71,44 @@
 		21032A4E1ECE7D77009A3AC5 /* SmartClock */ = {
 			isa = PBXGroup;
 			children = (
-				21032A4F1ECE7D77009A3AC5 /* AppDelegate.swift */,
-				21032A511ECE7D77009A3AC5 /* ViewController.swift */,
 				21032A531ECE7D77009A3AC5 /* Main.storyboard */,
+				21032A4F1ECE7D77009A3AC5 /* AppDelegate.swift */,
+				21032A611ECE8232009A3AC5 /* ClockVC.swift */,
+				21032A631ECE8689009A3AC5 /* AlarmsTVC.swift */,
+				21032A651ECE877F009A3AC5 /* CreateAlarmVC.swift */,
+				21032A691ECE8B15009A3AC5 /* Model */,
 				21032A561ECE7D77009A3AC5 /* Assets.xcassets */,
 				21032A581ECE7D77009A3AC5 /* LaunchScreen.storyboard */,
 				21032A5B1ECE7D77009A3AC5 /* Info.plist */,
 			);
 			path = SmartClock;
+			sourceTree = "<group>";
+		};
+		21032A691ECE8B15009A3AC5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				21032A6A1ECE8B26009A3AC5 /* RealmInteractor.swift */,
+				21032A6C1ECE8C15009A3AC5 /* WeatherFetcher.swift */,
+				21032A671ECE8892009A3AC5 /* Alarm.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		DB0507F4FC048629242467F7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5ED010076B75593BE55A8966 /* Pods_SmartClock.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EF79391BB2C30A715FC95667 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0F32CF2720437933FF905706 /* Pods-SmartClock.debug.xcconfig */,
+				5B038D39495F5C042AE96466 /* Pods-SmartClock.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +118,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 21032A5E1ECE7D77009A3AC5 /* Build configuration list for PBXNativeTarget "SmartClock" */;
 			buildPhases = (
+				D273AFB9182011B18AB4D2C4 /* [CP] Check Pods Manifest.lock */,
 				21032A481ECE7D77009A3AC5 /* Sources */,
 				21032A491ECE7D77009A3AC5 /* Frameworks */,
 				21032A4A1ECE7D77009A3AC5 /* Resources */,
+				F0612D3CA280AEE42576DC20 /* [CP] Embed Pods Frameworks */,
+				0158E924B9BA29902AACF1D2 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -132,13 +182,66 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0158E924B9BA29902AACF1D2 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SmartClock/Pods-SmartClock-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D273AFB9182011B18AB4D2C4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F0612D3CA280AEE42576DC20 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SmartClock/Pods-SmartClock-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		21032A481ECE7D77009A3AC5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				21032A521ECE7D77009A3AC5 /* ViewController.swift in Sources */,
+				21032A6D1ECE8C15009A3AC5 /* WeatherFetcher.swift in Sources */,
+				21032A621ECE8232009A3AC5 /* ClockVC.swift in Sources */,
 				21032A501ECE7D77009A3AC5 /* AppDelegate.swift in Sources */,
+				21032A681ECE8892009A3AC5 /* Alarm.swift in Sources */,
+				21032A661ECE877F009A3AC5 /* CreateAlarmVC.swift in Sources */,
+				21032A6B1ECE8B26009A3AC5 /* RealmInteractor.swift in Sources */,
+				21032A641ECE8689009A3AC5 /* AlarmsTVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,7 +362,9 @@
 		};
 		21032A5F1ECE7D77009A3AC5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0F32CF2720437933FF905706 /* Pods-SmartClock.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = P44AL382B9;
 				INFOPLIST_FILE = SmartClock/Info.plist;
@@ -272,7 +377,9 @@
 		};
 		21032A601ECE7D77009A3AC5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5B038D39495F5C042AE96466 /* Pods-SmartClock.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = P44AL382B9;
 				INFOPLIST_FILE = SmartClock/Info.plist;
@@ -302,6 +409,7 @@
 				21032A601ECE7D77009A3AC5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
