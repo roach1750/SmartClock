@@ -132,10 +132,10 @@
                                 </date>
                             </datePicker>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CYt-dS-9lL">
-                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
-                                <color key="backgroundColor" red="1" green="0.57457399368286133" blue="0.0019781978335231543" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <rect key="frame" x="0.0" y="592" width="375" height="75"/>
+                                <color key="backgroundColor" red="0.29819521307945251" green="0.84997797012329102" blue="0.39012432098388672" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="gc6-r5-xOI"/>
+                                    <constraint firstAttribute="height" constant="75" id="gc6-r5-xOI"/>
                                 </constraints>
                                 <state key="normal" title="Create Alarm">
                                     <color key="titleColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -144,15 +144,15 @@
                                     <action selector="createAlarmButtonPressed:" destination="USC-q6-T1d" eventType="touchUpInside" id="1hk-jv-mqS"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Wake me up earlier by: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WiH-Gf-iqW">
-                                <rect key="frame" x="16" y="373" width="178" height="55"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="If conditions are: Rain" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Lt-sm-Ly0" customClass="FRHyperLabel">
+                                <rect key="frame" x="16" y="288" width="343" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="If the weather conditions are: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uBe-dL-gS9">
-                                <rect key="frame" x="16" y="302" width="245" height="63"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Wake me up eariler by: 10 Minutes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zPR-fg-hJ2" customClass="FRHyperLabel">
+                                <rect key="frame" x="16" y="331" width="343" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -171,6 +171,8 @@
                     </view>
                     <navigationItem key="navigationItem" title="Add Alarm" id="Xim-uB-ase"/>
                     <connections>
+                        <outlet property="alarmAdjustmentLabel" destination="zPR-fg-hJ2" id="YiZ-ye-5i0"/>
+                        <outlet property="conditionsLabel" destination="0Lt-sm-Ly0" id="6vy-K4-yzO"/>
                         <outlet property="timePicker" destination="Xf2-n5-f8l" id="nKS-iy-LmD"/>
                     </connections>
                 </viewController>

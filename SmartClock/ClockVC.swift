@@ -15,8 +15,8 @@ class ClockVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         Timer.scheduledTimer(timeInterval: 0.01, target: self, selector: #selector(ClockVC.updateTimeLabel), userInfo: nil, repeats: true)
-        let wf = WeatherFetcher()
-        wf.fetchCurrentWeather()
+//        let wf = WeatherFetcher()
+//        wf.fetchCurrentWeather()
         
     }
     
