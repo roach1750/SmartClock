@@ -20,6 +20,18 @@ class RealmInteractor: NSObject {
         }
     }
     
+    func fetchAllAlarms() -> [Alarm]? {
+        let realm = try! Realm()
+        let results = Array(realm.objects(Alarm.self))
+        return results
+    }
     
-    
+    func deleteAlarm(alarm: Alarm) {
+        let realm = try! Realm()
+        do {
+            try! realm.write {
+                realm.delete(alarm)
+            }
+        }
+    }
 }

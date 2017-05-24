@@ -14,6 +14,8 @@ class Alarm: Object {
     
     dynamic var alarmTime = NSDate()
     dynamic var weatherCheckTime = NSDate()
+    dynamic var weatherCondition = ""
+    dynamic var weatherDelayTime = Int()
     dynamic var enabled = true
     dynamic var id = 0
     

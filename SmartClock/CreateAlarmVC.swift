@@ -158,11 +158,36 @@ class CreateAlarmVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSou
         newAlarm.alarmTime = timePicker.date as NSDate
         newAlarm.enabled = true
         newAlarm.id = Int(Date().timeIntervalSince1970)
+        newAlarm.weatherCondition = (conditionsLabel.text?.lastWord)!
+        
+        let delayTimeString = alarmAdjustmentLabel.text!
+        
+        newAlarm.weatherDelayTime = Int(delayTimeString.components(separatedBy: " ")[5])!
+        
+        newAlarm.weatherCheckTime = newAlarm.alarmTime.addingTimeInterval(TimeInterval(-newAlarm.weatherDelayTime*60))
+        let RI = RealmInteractor()
+        RI.saveAlarm(alarm: newAlarm)
     }
 
 }
 
-
+extension String {
+    var byWords: [String] {
+        var result:[String] = []
+        enumerateSubstrings(in: startIndex..<endIndex, options: .byWords) {
+            guard let word = $0 else { return }
+            print($1,$2,$3)
+            result.append(word)
+        }
+        return result
+    }
+    var lastWord: String {
+        return byWords.last ?? ""
+    }
+    func lastWords(_ max: Int) -> [String] {
+        return Array(byWords.suffix(max))
+    }
+}
 
 
 
