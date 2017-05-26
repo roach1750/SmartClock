@@ -176,6 +176,8 @@ class CreateAlarmVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSou
         kinveyAlarm.weatherCondition = (conditionsLabel.text?.lastWord)!
         let delayTimeString = alarmAdjustmentLabel.text!
         kinveyAlarm.weatherDelayTime = Int(delayTimeString.components(separatedBy: " ")[5])!
+
+        
         let KI = KinveyInteractor()
         KI.uploadAlarm(alarm: kinveyAlarm)
     }

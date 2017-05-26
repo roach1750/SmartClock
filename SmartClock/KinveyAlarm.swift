@@ -6,7 +6,6 @@
 //  Copyright © 2017 Andrew Roach. All rights reserved.
 //
 
-import UIKit
 import Kinvey
 
 class KinveyAlarm: Entity {
@@ -36,12 +35,6 @@ class KinveyAlarm: Entity {
         weatherCondition <- ("weatherCondition", map["weatherCondition"])
         weatherDelayTime <- ("weatherDelayTime", map["weatherDelayTime"])
         geolocation <- ("geolocation", map["geolocation"])
-
-        
-        
-        
     }
-
-    
     
 }

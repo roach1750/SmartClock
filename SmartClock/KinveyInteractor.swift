@@ -13,7 +13,6 @@ class KinveyInteractor: NSObject {
     
     func uploadAlarm(alarm: KinveyAlarm) {
         let dataStore = DataStore<KinveyAlarm>.collection()
-        
         dataStore.save(alarm) { alarm, error in
             if let alarm = alarm {
                 //succeed
@@ -22,6 +21,17 @@ class KinveyInteractor: NSObject {
                 //fail
             }
         }
+        
+        dataStore.sync() { (count, books, error) -> Void in
+            if let books = books, let count = count {
+                //succeed
+                print("\(count) Books: \(books)")
+            } else {
+                print(error)
+                //fail
+            }
+        }
+    
     }
     
     func findAllAlarms() {

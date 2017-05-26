@@ -26,7 +26,36 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
             }
         }
         
-        Kinvey.sharedClient.initialize(appKey: "kid_BksDalHbZ", appSecret: "e8c76b4b0ba64e5892ff13389306928d")
+
+        
+        Kinvey.sharedClient.initialize(appKey: "kid_BksDalHbZ", appSecret: "e8c76b4b0ba64e5892ff13389306928d") { user, error in
+            if let _ = user {
+                //do nothing
+            } else {
+                
+                User.exists(username: "test") { exists, error in
+                    if exists {
+                        User.login(username: "test", password: "test") { user, error in
+                            if let _ = user {
+                                //do nothing
+                            } else {
+                                //do something!
+                            }
+                        }
+                    } else {
+                        User.signup(username: "test", password: "test") { user, error in
+                            if let _ = user {
+                                //do nothing
+                            } else {
+                                //do something!
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        
         Kinvey.sharedClient.ping() { (result: Result<EnvironmentInfo, Swift.Error>) in
             switch result {
             case .success(let envInfo):
@@ -37,6 +66,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
                 //failed
             }
         }
+        
+        
+        
+        
+        
+        
         
         
         return true
