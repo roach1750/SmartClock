@@ -154,19 +154,30 @@ class CreateAlarmVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSou
 
 
     func createAlarm() {
-        let newAlarm = Alarm()
-        newAlarm.alarmTime = timePicker.date as NSDate
-        newAlarm.enabled = true
-        newAlarm.id = Int(Date().timeIntervalSince1970)
-        newAlarm.weatherCondition = (conditionsLabel.text?.lastWord)!
+//        let newAlarm = Alarm()
+//        newAlarm.alarmTime = timePicker.date as NSDate
+//        newAlarm.enabled = true
+//        newAlarm.id = Int(Date().timeIntervalSince1970)
+//        newAlarm.weatherCondition = (conditionsLabel.text?.lastWord)!
+//        
+//        let delayTimeString = alarmAdjustmentLabel.text!
+//        
+//        newAlarm.weatherDelayTime = Int(delayTimeString.components(separatedBy: " ")[5])!
+//        
+//        newAlarm.weatherCheckTime = newAlarm.alarmTime.addingTimeInterval(TimeInterval(-newAlarm.weatherDelayTime*60))
+//        
+//        let RI = RealmInteractor()
+//        RI.saveAlarm(alarm: newAlarm)
+//        let AL = AlarmLogic()
+//        AL.scheduleAlarm(alarm: newAlarm)
         
+        let kinveyAlarm = KinveyAlarm()
+        kinveyAlarm.alarmTime = timePicker.date
+        kinveyAlarm.weatherCondition = (conditionsLabel.text?.lastWord)!
         let delayTimeString = alarmAdjustmentLabel.text!
-        
-        newAlarm.weatherDelayTime = Int(delayTimeString.components(separatedBy: " ")[5])!
-        
-        newAlarm.weatherCheckTime = newAlarm.alarmTime.addingTimeInterval(TimeInterval(-newAlarm.weatherDelayTime*60))
-        let RI = RealmInteractor()
-        RI.saveAlarm(alarm: newAlarm)
+        kinveyAlarm.weatherDelayTime = Int(delayTimeString.components(separatedBy: " ")[5])!
+        let KI = KinveyInteractor()
+        KI.uploadAlarm(alarm: kinveyAlarm)
     }
 
 }

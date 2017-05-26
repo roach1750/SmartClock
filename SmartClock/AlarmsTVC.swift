@@ -20,6 +20,11 @@ class AlarmsTVC: UITableViewController {
         reloadTable()
     }
 
+    @IBAction func refreshButtonPressed(_ sender: UIBarButtonItem) {
+        let kI = KinveyInteractor()
+        kI.findAllAlarms()
+    }
+    
     func reloadTable() {
         let RI = RealmInteractor()
         alarms = RI.fetchAllAlarms()
