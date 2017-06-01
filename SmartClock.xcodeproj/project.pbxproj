@@ -20,6 +20,7 @@
 		21ACAA5B1ED51A5D001459BF /* AlarmLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21ACAA5A1ED51A5D001459BF /* AlarmLogic.swift */; };
 		21ACAA5D1ED7BA29001459BF /* KinveyInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21ACAA5C1ED7BA29001459BF /* KinveyInteractor.swift */; };
 		21ACAA5F1ED7BACA001459BF /* KinveyAlarm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21ACAA5E1ED7BACA001459BF /* KinveyAlarm.swift */; };
+		21ACAA611EDE4B19001459BF /* LocationFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21ACAA601EDE4B19001459BF /* LocationFetcher.swift */; };
 		D17CE125F8611ED25D6A026A /* Pods_SmartClock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5ED010076B75593BE55A8966 /* Pods_SmartClock.framework */; };
 /* End PBXBuildFile section */
 
@@ -40,6 +41,7 @@
 		21ACAA5A1ED51A5D001459BF /* AlarmLogic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlarmLogic.swift; sourceTree = "<group>"; };
 		21ACAA5C1ED7BA29001459BF /* KinveyInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KinveyInteractor.swift; sourceTree = "<group>"; };
 		21ACAA5E1ED7BACA001459BF /* KinveyAlarm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KinveyAlarm.swift; sourceTree = "<group>"; };
+		21ACAA601EDE4B19001459BF /* LocationFetcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationFetcher.swift; sourceTree = "<group>"; };
 		5B038D39495F5C042AE96466 /* Pods-SmartClock.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartClock.release.xcconfig"; path = "Pods/Target Support Files/Pods-SmartClock/Pods-SmartClock.release.xcconfig"; sourceTree = "<group>"; };
 		5ED010076B75593BE55A8966 /* Pods_SmartClock.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmartClock.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -95,6 +97,7 @@
 			children = (
 				21032A6A1ECE8B26009A3AC5 /* RealmInteractor.swift */,
 				21032A6C1ECE8C15009A3AC5 /* WeatherFetcher.swift */,
+				21ACAA601EDE4B19001459BF /* LocationFetcher.swift */,
 				21ACAA5C1ED7BA29001459BF /* KinveyInteractor.swift */,
 				21ACAA5E1ED7BACA001459BF /* KinveyAlarm.swift */,
 				21032A671ECE8892009A3AC5 /* Alarm.swift */,
@@ -253,6 +256,7 @@
 				21032A621ECE8232009A3AC5 /* ClockVC.swift in Sources */,
 				21032A501ECE7D77009A3AC5 /* AppDelegate.swift in Sources */,
 				21032A681ECE8892009A3AC5 /* Alarm.swift in Sources */,
+				21ACAA611EDE4B19001459BF /* LocationFetcher.swift in Sources */,
 				21032A661ECE877F009A3AC5 /* CreateAlarmVC.swift in Sources */,
 				21ACAA5F1ED7BACA001459BF /* KinveyAlarm.swift in Sources */,
 				21032A6B1ECE8B26009A3AC5 /* RealmInteractor.swift in Sources */,

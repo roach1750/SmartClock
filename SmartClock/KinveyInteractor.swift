@@ -27,7 +27,7 @@ class KinveyInteractor: NSObject {
                 //succeed
                 print("\(count) Books: \(books)")
             } else {
-                print(error)
+                print(error!)
                 //fail
             }
         }

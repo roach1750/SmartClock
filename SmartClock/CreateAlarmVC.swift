@@ -7,9 +7,11 @@
 //
 
 import UIKit
+import CoreLocation
 import FRHyperLabel
+import Kinvey
 
-class CreateAlarmVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate {
+class CreateAlarmVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate, CLLocationManagerDelegate {
 
     @IBOutlet weak var timePicker: UIDatePicker!
 
@@ -21,7 +23,8 @@ class CreateAlarmVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSou
 
     var weatherConditions = ["Rain", "Cloudy", "Snowy"]
     var timeDelays = ["5 Minutes", "10 Minutes", "15 Minutes", "20 Minutes"]
-
+    
+    let locationFetcher = LocationFetcher()
     
     override func viewDidLoad() {
         
@@ -29,8 +32,11 @@ class CreateAlarmVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSou
         setUpTimeDelayPickerView()
         setUpConditionsLabel(condition: weatherConditions[0])
         setUpAlarmAdjustmentLabel(timeDelay: timeDelays[0])
+        locationFetcher.setUpLocationManager()
         super.viewDidLoad()
     }
+    
+
     
     func setUpWeatherConditionsPickerView() {
         let pickerView = UIPickerView()
@@ -49,8 +55,6 @@ class CreateAlarmVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSou
         weatherConditionsTextField!.inputView = pickerView
         weatherConditionsTextField!.inputAccessoryView = toolBar
         view.addSubview(weatherConditionsTextField!)
-        
-
     }
     
     func setUpTimeDelayPickerView() {
@@ -141,15 +145,20 @@ class CreateAlarmVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSou
     
     
     
+    
+    
     @IBAction func selectConditionsTextField(_ sender: UITextField) {
         
         
     }
     
+    
+    
     @IBAction func createAlarmButtonPressed(_ sender: UIButton) {
         createAlarm()
         navigationController?.popViewController(animated: true)
-    
+
+        
     }
 
 
@@ -175,13 +184,32 @@ class CreateAlarmVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSou
         kinveyAlarm.alarmTime = timePicker.date
         kinveyAlarm.weatherCondition = (conditionsLabel.text?.lastWord)!
         let delayTimeString = alarmAdjustmentLabel.text!
-        kinveyAlarm.weatherDelayTime = Int(delayTimeString.components(separatedBy: " ")[5])!
+        kinveyAlarm.weatherDelayTimeMinutes = Int(delayTimeString.components(separatedBy: " ")[5])!
+        
+        let delayTimeInSeconds = kinveyAlarm.weatherDelayTimeMinutes * 60 * -1
+        
+        kinveyAlarm.weatherDelayTime = timePicker.date.addingTimeInterval(TimeInterval(delayTimeInSeconds))
+        
+        
 
+        let calendar = Calendar.current
+        let hour = calendar.component(.hour, from: timePicker.date)
+        let minutes = calendar.component(.minute, from: timePicker.date)
+        kinveyAlarm.alarmTimeHours = hour
+        kinveyAlarm.alarmTimeMinutes = minutes
+        
+        kinveyAlarm.location = GeoPoint(coordinate: (locationFetcher.locationManager.location?.coordinate)!)
+        
         
         let KI = KinveyInteractor()
         KI.uploadAlarm(alarm: kinveyAlarm)
     }
 
+    
+
+    
+    
+    
 }
 
 extension String {
