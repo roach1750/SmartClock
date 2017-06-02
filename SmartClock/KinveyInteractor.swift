@@ -12,20 +12,20 @@ class KinveyInteractor: NSObject {
 
     
     func uploadAlarm(alarm: KinveyAlarm) {
-        let dataStore = DataStore<KinveyAlarm>.collection()
+        let dataStore = DataStore<KinveyAlarm>.collection(.sync)
         dataStore.save(alarm) { alarm, error in
             if let alarm = alarm {
                 //succeed
-                print("Uploaded alarm: \(alarm)")
+                print("saved alarm: \(String(describing: alarm.entityId))")
             } else {
                 //fail
             }
         }
         
-        dataStore.sync() { (count, books, error) -> Void in
-            if let books = books, let count = count {
+        dataStore.sync() { (count, alarms, error) -> Void in
+            if let count = count {
                 //succeed
-                print("\(count) Books: \(books)")
+                print("Synced \(count) Alarms")
             } else {
                 print(error!)
                 //fail
