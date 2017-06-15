@@ -16,7 +16,7 @@ class KinveyInteractor: NSObject {
         dataStore.save(alarm) { alarm, error in
             if let alarm = alarm {
                 //succeed
-                print("saved alarm: \(String(describing: alarm.entityId))")
+                print("saved alarm: \(String(describing: alarm.entityId!))")
             } else {
                 //fail
             }
@@ -25,7 +25,7 @@ class KinveyInteractor: NSObject {
         dataStore.sync() { (count, alarms, error) -> Void in
             if let count = count {
                 //succeed
-                print("Synced \(count) Alarms")
+                print("Synced \(count) Alarm")
             } else {
                 print(error!)
                 //fail

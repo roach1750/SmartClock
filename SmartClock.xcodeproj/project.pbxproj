@@ -21,6 +21,8 @@
 		21ACAA5D1ED7BA29001459BF /* KinveyInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21ACAA5C1ED7BA29001459BF /* KinveyInteractor.swift */; };
 		21ACAA5F1ED7BACA001459BF /* KinveyAlarm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21ACAA5E1ED7BACA001459BF /* KinveyAlarm.swift */; };
 		21ACAA611EDE4B19001459BF /* LocationFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21ACAA601EDE4B19001459BF /* LocationFetcher.swift */; };
+		21ACAA651EEDC4B1001459BF /* rain.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 21ACAA641EEDC4B1001459BF /* rain.aiff */; };
+		21ACAA671EF0A914001459BF /* 0124.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 21ACAA661EF0A914001459BF /* 0124.aiff */; };
 		D17CE125F8611ED25D6A026A /* Pods_SmartClock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5ED010076B75593BE55A8966 /* Pods_SmartClock.framework */; };
 /* End PBXBuildFile section */
 
@@ -42,6 +44,9 @@
 		21ACAA5C1ED7BA29001459BF /* KinveyInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KinveyInteractor.swift; sourceTree = "<group>"; };
 		21ACAA5E1ED7BACA001459BF /* KinveyAlarm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KinveyAlarm.swift; sourceTree = "<group>"; };
 		21ACAA601EDE4B19001459BF /* LocationFetcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationFetcher.swift; sourceTree = "<group>"; };
+		21ACAA621EE0EACB001459BF /* SmartClock.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SmartClock.entitlements; sourceTree = "<group>"; };
+		21ACAA641EEDC4B1001459BF /* rain.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = rain.aiff; sourceTree = "<group>"; };
+		21ACAA661EF0A914001459BF /* 0124.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = 0124.aiff; sourceTree = "<group>"; };
 		5B038D39495F5C042AE96466 /* Pods-SmartClock.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartClock.release.xcconfig"; path = "Pods/Target Support Files/Pods-SmartClock/Pods-SmartClock.release.xcconfig"; sourceTree = "<group>"; };
 		5ED010076B75593BE55A8966 /* Pods_SmartClock.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmartClock.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -79,11 +84,14 @@
 		21032A4E1ECE7D77009A3AC5 /* SmartClock */ = {
 			isa = PBXGroup;
 			children = (
+				21ACAA621EE0EACB001459BF /* SmartClock.entitlements */,
 				21032A531ECE7D77009A3AC5 /* Main.storyboard */,
 				21032A4F1ECE7D77009A3AC5 /* AppDelegate.swift */,
 				21032A611ECE8232009A3AC5 /* ClockVC.swift */,
 				21032A631ECE8689009A3AC5 /* AlarmsTVC.swift */,
 				21032A651ECE877F009A3AC5 /* CreateAlarmVC.swift */,
+				21ACAA641EEDC4B1001459BF /* rain.aiff */,
+				21ACAA661EF0A914001459BF /* 0124.aiff */,
 				21032A691ECE8B15009A3AC5 /* Model */,
 				21032A561ECE7D77009A3AC5 /* Assets.xcassets */,
 				21032A581ECE7D77009A3AC5 /* LaunchScreen.storyboard */,
@@ -162,7 +170,10 @@
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
-								enabled = 0;
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 1;
 							};
 						};
 					};
@@ -193,7 +204,9 @@
 			files = (
 				21032A5A1ECE7D77009A3AC5 /* LaunchScreen.storyboard in Resources */,
 				21032A571ECE7D77009A3AC5 /* Assets.xcassets in Resources */,
+				21ACAA671EF0A914001459BF /* 0124.aiff in Resources */,
 				21032A551ECE7D77009A3AC5 /* Main.storyboard in Resources */,
+				21ACAA651EEDC4B1001459BF /* rain.aiff in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -387,11 +400,14 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SmartClock/SmartClock.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEVELOPMENT_TEAM = P44AL382B9;
 				INFOPLIST_FILE = SmartClock/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = awesomeApps.SmartClock;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -402,6 +418,8 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SmartClock/SmartClock.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEVELOPMENT_TEAM = P44AL382B9;
 				INFOPLIST_FILE = SmartClock/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

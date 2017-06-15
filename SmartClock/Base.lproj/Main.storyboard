@@ -38,13 +38,41 @@
                                     <segue destination="JMt-UB-n7S" kind="presentation" id="BAw-R5-6xm"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oIg-2C-Fbg">
+                                <rect key="frame" x="16" y="300" width="83" height="67"/>
+                                <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="67" id="658-tP-7Ey"/>
+                                    <constraint firstAttribute="width" constant="83" id="vhQ-xu-6RN"/>
+                                </constraints>
+                                <state key="normal" title="Test"/>
+                                <connections>
+                                    <action selector="TestButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Zqw-yW-wj1"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xEA-yI-VLF">
+                                <rect key="frame" x="276" y="300" width="83" height="67"/>
+                                <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="83" id="1cu-XJ-TV9"/>
+                                    <constraint firstAttribute="height" constant="67" id="fMt-tj-Q5g"/>
+                                </constraints>
+                                <state key="normal" title="Play Sound"/>
+                                <connections>
+                                    <action selector="playSound:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IXE-Bz-a5T"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="MNW-iA-yon" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="FfI-t0-h8g"/>
+                            <constraint firstItem="xEA-yI-VLF" firstAttribute="top" secondItem="MNW-iA-yon" secondAttribute="bottom" constant="250" id="Jxc-rT-EoF"/>
+                            <constraint firstItem="oIg-2C-Fbg" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="280" id="L8K-qT-j6Z"/>
                             <constraint firstItem="4pw-73-98h" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Skf-g8-eAl"/>
+                            <constraint firstItem="xEA-yI-VLF" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="ZHN-sP-FG2"/>
                             <constraint firstItem="MNW-iA-yon" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="a03-uW-ZH1"/>
                             <constraint firstItem="4pw-73-98h" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="70" id="gG2-9r-OY0"/>
+                            <constraint firstItem="oIg-2C-Fbg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="nEV-O6-ODh"/>
                         </constraints>
                     </view>
                     <connections>
@@ -53,7 +81,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="319" y="64"/>
+            <point key="canvasLocation" x="317.60000000000002" y="63.418290854572717"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="oJ8-Dz-eLD">
